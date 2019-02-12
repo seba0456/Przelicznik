@@ -27,7 +27,7 @@ int main()
         getline( cin, dane1 );
         cout << "na: " << endl; //wybor2
         getline( cin, dane2);
-        if ( dane1 == "tony" & dane2 == "kilogramy" )
+        if ( dane1 == "tony" && dane2 == "kilogramy" )
         {
             double dane;
             cout << "Podaj wartosc ton (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -35,7 +35,7 @@ int main()
             dane = z * 1000;
             cout << dane << " kg";
         }
-        else if ( dane1 == "tony" & dane2 == "dekagramy")
+        else if ( dane1 == "tony" && dane2 == "dekagramy")
           {
             double dane;
             cout << "Podaj wartosc ton (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -43,7 +43,7 @@ int main()
             dane = z * 100000;
             cout << dane << " dag";
           }
-        else if ( dane1 == "tony" & dane2 == "gramy")
+        else if ( dane1 == "tony" && dane2 == "gramy")
         {
             double dane;
             cout << "Podaj wartosc ton (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -51,7 +51,7 @@ int main()
             dane = z * 10000000;
             cout << dane << " gram";
         }
-        else if ( dane1 == "tony" & dane2 == "miligramy" )
+        else if ( dane1 == "tony" && dane2 == "miligramy" )
         {
             double dane; //waretosc wyjscowa
             cout << "Podaj wartosc ton (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -59,7 +59,7 @@ int main()
             dane = z * 1000000000;
             cout << dane << " gram";
         }
-        else if ( dane1 == "kilogramy" & dane2 == "tony")
+        else if ( dane1 == "kilogramy" && dane2 == "tony")
         {
           double dane; //waretosc wyjscowa
             cout << "Podaj wartosc kilogramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -67,7 +67,7 @@ int main()
             dane = z * 0.1000;
             cout << dane << " ton";
         }
-        else if ( dane1 == "kilogramy" & dane2 == "dekagramy")
+        else if ( dane1 == "kilogramy" && dane2 == "dekagramy")
         {
           double dane; //waretosc wyjscowa
             cout << "Podaj wartosc kilogramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
@@ -75,16 +75,91 @@ int main()
             dane = z * 100;
             cout << dane << " ton";
         }
-        else if ( dane1 == "kilogramy" & dane2 == "gramy" )
+        else if ( dane1 == "kilogramy" && dane2 == "gramy" )
         {
             double dane;
             cout << "Podaj wartosc kilogramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
             cin >> z;
             dane = z * 1000;
+            cout << dane << " gram";
+        }
+        else if (  dane1 == "kilogramy" && dane2 == "miligramy" )
+        {
+            double dane;
+            cout << "Podaj wartosc kilogramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 1000000;
+            cout << dane << " miligramow";
+        }
+        else if ( dane1 == "gramy" && dane2 == "tony" )
+        {
+            double dane;
+            cout << "Podaj wartosc gramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z / 1000000;
             cout << dane << " ton";
         }
+        else if ( dane1 == "gramy" && dane2 == "kilogram" )
+        {
+            double dane;
+            cout << "Podaj wartosc gramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z / 1000;
+            cout << dane << " kilogramow";
+        }
+        else if ( dane1 == "gramy" && dane2 == "dekagramy")
+        {
+            double dane;
+            cout << "Podaj wartosc gramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.1;
+            cout << dane << " dekagramow";
+        }
+        else if ( dane1 == "gramy" && dane2 == "miligram")
+        {
+            double dane;
+            cout << "Podaj wartosc gramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 1000;
+            cout << dane << " miligram";
+        }
+        else if ( dane1 == "miligramy" && dane2 == "tony" )
+        {
+            double dane;
+            cout << "Podaj wartosc miligramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.000000001;
+            cout << dane << " ton";
+        }
+        else if ( dane1 == "miligramy" && dane2 == "kilogramy" )
+        {
+            double dane;
+            cout << "Podaj wartosc miligramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.000001;
+            cout << dane << " kilogramow";
+        }
+        else if ( dane1 == "miligramy" && dane2 == "gramy" )
+        {
+            double dane;
+            cout << "Podaj wartosc miligramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.001;
+            cout << dane << " gram";
+        }
+        else if ( dane1 == "miligramy" && dane2 == "dekagramy" )
+        {
+            double dane;
+            cout << "Podaj wartosc miligramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >>  z;
+            dane = z * 0.0001;
+            cout << dane << " dekagram";
+        }
     }
-
+    else if ( instrukcja == "odleglosc" )
+    {
+     cout << "Wybrano mase obslugjemy tony, kilogrmy, dekagramy, gramy, miligramy. (nazwa) " << endl;
+    }
 
 
     return 0;
