@@ -158,7 +158,112 @@ int main()
     }
     else if ( instrukcja == "odleglosc" )
     {
-     cout << "Wybrano mase obslugjemy tony, kilogrmy, dekagramy, gramy, miligramy. (nazwa) " << endl;
+     cout << "Wybrano odległosc obslugjemy, kilometry, metry, centymetry, milimetry. (nazwa) " << endl;
+        string dane1;
+        string dane2;
+        double z;
+        double na;
+        cout << "z czego chcesz przeliczyc?" << endl; //wybor dane1
+        getline( cin, dane1 );
+        cout << "na: " << endl; //wybor2
+        getline( cin, dane2);
+        if ( dane1 == "kilometry" && dane2 == "metry" )
+        {
+            double dane;
+            cout << "Podaj wartosc kilometrow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 1000;
+            cout << dane << " m";
+        }
+        else if ( dane1 == "kilometry" && dane2 == "centymetry")
+          {
+            double dane;
+            cout << "Podaj wartosc ton (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z; //wartosc wejscowa
+            dane = z * 100000;
+            cout << dane << " centymetrow";
+          }
+        else if ( dane1 == "kilometry" && dane2 == "milimetry")
+        {
+            double dane;
+            cout << "Podaj wartosc kilometrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z; //wartosc wejscowa
+            dane = z * 1000000;
+            cout << dane << " milimetrów";
+        }
+        else if ( dane1 == "metry" && dane2 == "kilometry")
+        {
+          double dane; //waretosc wyjscowa
+            cout << "Podaj wartosc metrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z; //wartosc wejscowa
+            dane = z * 0.1000;
+            cout << dane << " kilometry";
+        }
+        else if ( dane1 == "metry" && dane2 == "centymetry")
+        {
+          double dane; //waretosc wyjscowa
+            cout << "Podaj wartosc metrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z; //wartosc wejscowa
+            dane = z * 100;
+            cout << dane << " centymetrów";
+        }
+        else if ( dane1 == "metry" && dane2 == "milimetry" )
+        {
+            double dane;
+            cout << "Podaj wartosc metrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 1000;
+            cout << dane << " milimetry";
+        }
+        else if (  dane1 == "centymetry" && dane2 == "kilometry" )
+        {
+            double dane;
+            cout << "Podaj wartosc centymetrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.100000;
+            cout << dane << " kilometrów";
+        }
+        else if ( dane1 == "centymetry" && dane2 == "metry" )
+        {
+            double dane;
+            cout << "Podaj wartosc centymetry (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z / 100;
+            cout << dane << " metrow";
+        }
+        else if ( dane1 == "centymetry" && dane2 == "milimetry" )
+        {
+            double dane;
+            cout << "Podaj wartosc centymetrow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z / 10;
+            cout << dane << " milimetrow";
+        }
+        else if ( dane1 == "milimetry" && dane2 == "kilometry")
+        {
+            double dane;
+            cout << "Podaj wartosc milimetrów (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.0000001;
+            cout << dane << " kiliometrow";
+        }
+        else if ( dane1 == "milimetry" && dane2 == "metry")
+        {
+            double dane;
+            cout << "Podaj wartosc milimetrow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.0001;
+            cout << dane << " metrow";
+        }
+        else if ( dane1 == "milimetry" && dane2 == "centymetry" )
+        {
+            double dane;
+            cout << "Podaj wartosc miligramow (jesli zmienna jest ulamkiem dziesietnym zapisz czesc dziesietna po kropce (.) nie po przecinku (,)" << endl;
+            cin >> z;
+            dane = z * 0.1;
+            cout << dane << " centymetrow";
+        }
+
     }
 
 
